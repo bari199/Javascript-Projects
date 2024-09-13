@@ -10,9 +10,6 @@ chooseImgBtn = document.querySelector(".choose-img");
 saveImgBtn = document.querySelector(".save-img");
 
 
-
-
-
 let icon = document.getElementById("icon");
 
 icon.onclick = function(){
@@ -25,10 +22,6 @@ icon.onclick = function(){
         console.log(icon);
     }
 }
-
-
-
-
 
 
 let brightness = 100, saturation = 100, inversion = 0, grayscale = 0;
