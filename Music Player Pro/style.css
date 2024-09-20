@@ -65,7 +65,7 @@ body{
     width: 100%;
     margin-top: 25px;
     overflow: hidden;
-    background: red;
+    background: var(--primary-color);
     border-radius: 15px;
     box-shadow: 0px 6px 12px var(--lightbshadow);
     
@@ -122,7 +122,7 @@ body{
 .progress-area .timer{
     margin-top: 2px;
 }
-.time span{
+.timer span{
     font-size: 13px;
     color: var(--lightblack);
 }
@@ -255,11 +255,11 @@ ul li.playing {
 
 @media (max-width: 768px) {
     .wrapper {
-        width: 95%; /* Increase width for smaller screens */
-        padding: 20px 10px; /* Adjust padding for small screens */
+        width: 90%; /* Increase width for smaller screens */
+        padding: 20px 25px; /* Adjust padding for small screens */
     }
     .img-area {
-        height: 180px; /* Reduced image height for mobile */
+        height: 190px; /* Reduced image height for mobile */
     }
     .song-details .name {
         font-size: 18px; /* Adjust font size for mobile */
