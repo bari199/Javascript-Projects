@@ -60,17 +60,22 @@ Step 1 : DOM Selection:
             Let's break down what this line does:
 
             Breakdown:
-                wrapper: This is a reference to the main container element in your HTML with the class .wrapper. It's assumed that all the music player's elements are nested inside this container.
+                wrapper: This is a reference to the main container element in your HTML with the class .wrapper. It's assumed that all 
+               the music player's elements are nested inside this container.
                 
-                wrapper.querySelector(".song-details .name"): This method searches within the wrapper element for the first descendant element that matches the CSS selector .song-details .name.
+                wrapper.querySelector(".song-details .name"): This method searches within the wrapper element for the first descendant 
+                element that matches the CSS selector .song-details .name.
                 
-                .song-details .name: This is a CSS selector that targets an element with the class .name that is a descendant of an element with the class .song-details.
+                .song-details .name: This is a CSS selector that targets an element with the class .name that is a descendant of an 
+                 element with the class .song-details.
                 .song-details: An element that likely contains details about the song, such as the song name and artist.
                 .name: The specific element within .song-details that displays the song's name.
-                Assignment to musicName: The selected element is assigned to the variable musicName, allowing you to manipulate it later in your JavaScript code.
+                Assignment to musicName: The selected element is assigned to the variable musicName, allowing you to manipulate it later 
+                in your JavaScript code.
                 
                 Purpose:
-                By selecting the song name element and storing it in the musicName variable, your script can dynamically update the text content of this element. This is essential for displaying the correct song title when:
+                By selecting the song name element and storing it in the musicName variable, your script can dynamically update the text 
+                content of this element. This is essential for displaying the correct song title when:
                 
                 A new song starts playing.
                 The user navigates to the next or previous track.
@@ -78,7 +83,8 @@ Step 1 : DOM Selection:
 
           4) musicArtist = wrapper.querySelector(".song-details .artist"),
 
-                selects an element inside the wrapper that has the class artist, which is nested inside another element with the class song-details.
+                selects an element inside the wrapper that has the class artist, which is nested inside another element with the class 
+                song-details.
                 This element likely represents the artist's name in the music player. Let’s break it down:
 
                 Breakdown of the Code:
@@ -88,18 +94,22 @@ Step 1 : DOM Selection:
 
                 const wrapper = document.querySelector(".wrapper");
 
-                The wrapper element contains all other elements related to the music player, including song details, play buttons, and more.
+                The wrapper element contains all other elements related to the music player, including song details, play buttons, and 
+                more.
 
                 querySelector(".song-details .artist"):
 
                 querySelector: This method selects the first element that matches the given CSS selector inside the wrapper element.
-                .song-details .artist: This is a CSS selector that looks for an element with the class artist inside an element with the class song-details.
+                .song-details .artist: This is a CSS selector that looks for an element with the class artist inside an element with the 
+                 class song-details.
                 .song-details: Refers to a parent container that likely holds the details of the song (like the name and artist).
                 .artist: Refers to the element within .song-details that specifically holds the artist’s name.
                 Assignment to musicArtist:
                 
-                The selected element (which has the class artist and is inside the .song-details element) is stored in the variable musicArtist.
-                This variable is used later in the code to dynamically update or interact with the artist name when different songs are played.
+                The selected element (which has the class artist and is inside the .song-details element) is stored in the variable 
+                musicArtist.
+                This variable is used later in the code to dynamically update or interact with the artist name when different songs are 
+                 played.
 
         5) mainAudio = wrapper.querySelector("#main-audio"),
 
@@ -111,15 +121,18 @@ Step 1 : DOM Selection:
                 
                 This variable likely refers to the container for the entire music player interface, selected earlier using:
 
-                selects an audio element from the HTML that has the ID main-audio and assigns it to the variable mainAudio. This element is used to play audio files (songs) in the music player.
+                selects an audio element from the HTML that has the ID main-audio and assigns it to the variable mainAudio. This element 
+                 is used to play audio files (songs) in the music player.
 
                 querySelector("#main-audio"):
 
-              querySelector: This method is used to find and select the first element that matches the provided CSS selector within the wrapper element.
+              querySelector: This method is used to find and select the first element that matches the provided CSS selector within the 
+               wrapper element.
               "#main-audio": This is an ID selector, which selects the element with the ID main-audio.
               #: The hash (#) indicates an ID selector in CSS.
               main-audio: This is the specific ID of the audio element that is responsible for playing the song.
-              This selector is specific because each ID must be unique in an HTML document, so this will always select one element—the audio player element.
+              This selector is specific because each ID must be unique in an HTML document, so this will always select one element—the 
+              audio player element.
               Assignment to mainAudio:
               
               The selected element, which is the audio player with the ID main-audio, is assigned to the variable mainAudio.
@@ -201,7 +214,8 @@ Step 1 : DOM Selection:
         It dynamically updates the UI and prepares the song to be played.
 
        Parameters:
-        indexNumb: This parameter represents the index of the song in the allMusic array that you want to load. The allMusic array holds details about all the songs available in your music player.
+        indexNumb: This parameter represents the index of the song in the allMusic array that you want to load. The allMusic array holds 
+        details about all the songs available in your music player.
         Logic and Steps:
         musicName.innerText = allMusic[indexNumb - 1].name;:
         
@@ -218,12 +232,14 @@ Step 1 : DOM Selection:
         
         This line updates the album cover image displayed in the player.
         allMusic[indexNumb - 1].img: This retrieves the file name for the song's associated image from the allMusic array.
-        musicImg.src: Updates the src attribute of the musicImg element to point to the correct album art file. The image path is dynamically constructed using template literals (${}).
+        musicImg.src: Updates the src attribute of the musicImg element to point to the correct album art file. The image path is 
+        dynamically constructed using template literals (${}).
         mainAudio.src = songs/${allMusic[indexNumb - 1].src}.mp3;:
         
         This updates the audio file to play the correct song.
         allMusic[indexNumb - 1].src: Retrieves the file name of the song's audio file from the allMusic array.
-        mainAudio.src: Sets the src attribute of the mainAudio element to point to the correct .mp3 file so the player can load and play the selected song.
+        mainAudio.src: Sets the src attribute of the mainAudio element to point to the correct .mp3 file so the player can load and play 
+       the selected song.
         
 4) Play and Pause Music:
 
@@ -269,6 +285,7 @@ Step 1 : DOM Selection:
                 It stops the playback of the audio track that's linked to mainAudio.
    5)Next and Previous Track Logic:
 
+           
                
 
 
